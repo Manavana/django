@@ -2,7 +2,10 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <title>home</title>
+        <title>
+            {% block page_title %}
+            {% endblock %}
+        </title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
           integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
           crossorigin="anonymous">
@@ -44,6 +47,9 @@
                         </div>
                     </div>
                 </div>
+
+                {% block page_content %}
+                {% endblock %}
 
                 <div class="footer">
                     <div class="footerInside">
