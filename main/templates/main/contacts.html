@@ -29,12 +29,14 @@
                         <div class="menu">
                             <a href="#" class="link"><h3 class="menuName">menu</h3></a>
                             <ul class="menuSections">
-                                <li><a href="/">about us</a></li>
-                                <li><a href="/products/">products</a></li>
-                                <li><a href="/">stok</a></li>
-                                <li><a href="/">news</a></li>
-                                <li><a href="/">master class</a></li>
-                                <li><a href="/contacts/">contacts</a></li>
+                                {% for item in menu_section %}
+                                <li><a href="/">{{ item }}</a></li>
+                                <!--<li><a href="/products/">products</a></li>-->
+                                <!--<li><a href="/">stok</a></li>-->
+                                <!--<li><a href="/">news</a></li>-->
+                                <!--<li><a href="/">master class</a></li>-->
+                                <!--<li><a href="/contacts/">contacts</a></li>-->
+                                {% endfor %}
                             </ul>
                         </div>
                         <div class="advertising">
@@ -168,12 +170,12 @@
                             <input class="insertEmail" type="text" placeholder="INSERT EMAIL">
                             <button class="buttonSubmit">submit</button>
                             <div class="paymentMethods">
-                                <img src="/static/images/paymentMethods/american-express.jpg" alt="american-express">
-                                <img src="/static/images/paymentMethods/master-card.jpg" alt="master-card">
-                                <img src="/static/images/paymentMethods/maestro.jpg" alt="maestro">
-                                <img src="/static/images/paymentMethods/paypal.jpg" alt="paypal">
-                                <img src="/static/images/paymentMethods/discover.jpg" alt="discover">
-                                <img src="/static/images/paymentMethods/visa.jpg" alt="visa">
+                                <img src="/static/main/images/paymentMethods/american-express.jpg" alt="american-express">
+                                <img src="/static/main/images/paymentMethods/master-card.jpg" alt="master-card">
+                                <img src="/static/main/images/paymentMethods/maestro.jpg" alt="maestro">
+                                <img src="/static/main/images/paymentMethods/paypal.jpg" alt="paypal">
+                                <img src="/static/main/images/paymentMethods/discover.jpg" alt="discover">
+                                <img src="/static/main/images/paymentMethods/visa.jpg" alt="visa">
                             </div>
                         </div>
                         <div class="aboutUs">
