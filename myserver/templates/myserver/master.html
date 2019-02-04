@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>home</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+          crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/main/styles/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="headerInside">
+                    <a href="#" class="logo"></a>
+                    <div class="socialMedia">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="contentInside">
+                    <div>
+                        <div class="menu">
+                            <a href="#" class="link"><h3 class="menuName">menu</h3></a>
+                            <ul class="menuSections">
+                                {% for item in menu_section %}
+                                <li><a href="/">{{ item }}</a></li>
+                                <!--<li><a href="/products/">products</a></li>-->
+                                <!--<li><a href="/">stok</a></li>-->
+                                <!--<li><a href="/">news</a></li>-->
+                                <!--<li><a href="/">master class</a></li>-->
+                                <!--<li><a href="/contacts/">contacts</a></li>-->
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="advertising">
+                            <p class="open">now is open!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div class="footerInside">
+                        <div class="category">
+                            <div class="footerHead">
+                                Category
+                            </div>
+                            <ul class="categoryMenu">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">E-shop</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">New collections</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contacts</a></li>
+                            </ul>
+                        </div>
+                        <div class="account">
+                            <div class="footerHead">
+                                Our Account
+                            </div>
+                            <ul class="categoryMenu">
+                                <li><a href="#">Your Account</a></li>
+                                <li><a href="#">Personal information</a></li>
+                                <li><a href="#">Addresses</a></li>
+                                <li><a href="#">Discount</a></li>
+                                <li><a href="#">Orders history</a></li>
+                                <li><a href="#">Addresses</a></li>
+                                <li><a href="#">Search Terms</a></li>
+                            </ul>
+                        </div>
+                        <div class="support">
+                            <div class="footerHead">
+                                Our Support
+                            </div>
+                            <ul class="categoryMenu">
+                                <li><a href="#">Site Map</a></li>
+                                <li><a href="#">Search Terms</a></li>
+                                <li><a href="#">Advanced Search</a></li>
+                                <li><a href="#">Mobile</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Mobile</a></li>
+                                <li><a href="#">Addresses</a></li>
+                            </ul>
+                        </div>
+                        <div class="newsletter">
+                            <div class="footerHead">
+                                Newsletter
+                            </div>
+                            <p class="shortDescription">
+                                Join thousands of other people subscribe to our news
+                            </p>
+                            <input class="insertEmail" type="text" placeholder="INSERT EMAIL">
+                            <button class="buttonSubmit">submit</button>
+                            <div class="paymentMethods">
+                                <img src="/static/main/images/paymentMethods/american-express.jpg" alt="american-express">
+                                <img src="/static/main/images/paymentMethods/master-card.jpg" alt="master-card">
+                                <img src="/static/main/images/paymentMethods/maestro.jpg" alt="maestro">
+                                <img src="/static/main/images/paymentMethods/paypal.jpg" alt="paypal">
+                                <img src="/static/main/images/paymentMethods/discover.jpg" alt="discover">
+                                <img src="/static/main/images/paymentMethods/visa.jpg" alt="visa">
+                            </div>
+                        </div>
+                        <div class="aboutUs">
+                            <div class="footerHead">
+                                About Us
+                            </div>
+                            <p class="shortDescription">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                dolor.
+                                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                                ridiculus
+                                mus.
+                            </p>
+                            <p class="phone">
+                                Phone: 1-999-342-9876
+                            </p>
+                            <p class="Email">
+                                E-mail: info@surfhouse.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footerCopyrights">
+                        <div class="copyrightsInside">
+                            <p>
+                                &copy; 2014 SURFHOUSE. All rights reserved - Designed by theuncreativelab.com
+                            </p>
+                            <div class="footerSocial">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#"><i class="fab fa-tumblr"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fas fa-rss"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
