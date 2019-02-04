@@ -16,7 +16,7 @@ def index(request):
     )
 
     context = {
-        'name': 'Anton'
+        'name': 'Maria'
     }
     return HttpResponse(
         template.render(context)
@@ -26,12 +26,12 @@ def index(request):
     #     'main/index.html'
     # )
 
-def menuSections(request):
+def menu_section(request):
     rendered_page = render_to_string(
         'main/index.html',
         'main/contacts.html',
         {
-            'menuSections': [
+            'menu_section': [
                 'about us',
                 'products',
                 'stok',
@@ -41,11 +41,16 @@ def menuSections(request):
             ]
         }
     )
+
     return HttpResponse(
         rendered_page
     )
 
-# def contacts(request):
+def contacts(request):
+     return render(
+         request,
+         'main/contacts.html'
+     )
 #     rendered_page = render_to_string(
 #         'main/contacts.html',
 #         {
@@ -59,8 +64,3 @@ def menuSections(request):
 #     return HttpResponse(
 #         rendered_page
 #     )
-
-    # return render(
-    #     request,
-    #     'main/contacts.html'
-    # )
