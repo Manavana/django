@@ -1,5 +1,11 @@
 {% extends 'myserver/master.html' %}
 
+{% block page_title %}
+home
+{% endblock %}
+
+{% block page_content %}
+
 <div class="contentProduct">
     <div>
         <h1 class="text">MAIN</h1>
@@ -53,3 +59,5 @@
     <a href="../products/product5.html"><img class="foto" src="/static/main/images/instaFeed/5.jpg" alt="gallery"></a>
     <a href="../products/product6.html"><img class="foto" src="/static/main/images/instaFeed/6.jpg" alt="gallery"></a>
 </div>
+
+{% endblock %}
