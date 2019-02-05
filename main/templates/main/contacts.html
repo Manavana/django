@@ -1,0 +1,84 @@
+{% extends 'myserver/master.html' %}
+
+{% load static %}
+
+{% block page_title %}
+contacts
+{% endblock %}
+
+{% block page_static %}
+<link rel="stylesheet" href="{% static 'main/styles/style.css' %}">
+{% endblock %}
+
+{% block page_content %}
+<div class="contentProduct">
+    <div>
+        Мы находимся по адресу:
+        "Уголок творчества", Россия, Новосибирская область, 630090, г. Новосибирск.
+    </div>
+
+    <div>
+        Здесь вы можете задать свой вопрос или оставить отзыв о наших товарах!
+    </div>
+
+    <div class="form">
+        <fieldset>
+            <legend><strong>Контактная информация</strong></legend>
+            <form class="contacts" action="contacts.html" method="post">
+                <div class="field">
+                    <label for="name">Как Вас зовут? </label>
+                    <input type="text" id='name' placeholder='Ф. И. О.' required>
+                </div>
+                &lt;!&ndash;<div>
+                <label>Ваш пол: </label>
+                <label for="gender_male"><input type="radio" id="gender_male"
+                                                name="gender">Муж.</label>
+                <label for="gender_female"><input type="radio" id="gender_female" name="gender">Жен.</label>
+            </div>
+                <div class="field">
+                    <label for="city">Откуда Вы? </label>
+                    <select id="city">
+                        <optgroup label='Россия'>
+                            <option value="">Москва и Московская область</option>
+                            <option value="">Краснодарский край</option>
+                            <option value="">Волгоградская область</option>
+                            <option value="">Новосибирская область</option>
+                            <option value="">Тюменская область</option>
+                            <option value="">Приморский край</option>
+                        </optgroup>
+                    </select>
+                </div>&ndash;&gt;
+                <div class="field">
+                    <label for="email">Ваш Email: </label>
+                    <input type="email" id='email' placeholder='create@email.com' required>
+                </div>
+                <div class="field">
+                    <label for="phone">Ваш телефон: </label>
+                    <input type="tel" id='phone' placeholder='+ 7 (***) ***-**-**' required>
+                </div>
+                <div class="field">
+                    <label for="about">Мы будем очень благодарны за оставленный Вами отзыв о нашем
+                        магазине:</label>
+                    <textarea id="about" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <label for="newsletter">
+                        Хотите получать свежие новости о новом поступлении?
+                        <input type="checkbox" id='newsletter' checked>
+                    </label>
+                </div>
+                <div>
+                    <input type="submit" value='Отправить'>
+                    <input type="reset" value='Очистить'>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+
+    <hr>
+
+    <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A751ed03409a11f674756f35295a9fefcbd9f4910944370ce7e7349ff337d27a1&amp;width=100%25&amp;height=374&amp;lang=ru_RU&amp;scroll=true"></script>
+    <br>
+</div>
+{% endblock %}

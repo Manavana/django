@@ -1,0 +1,67 @@
+{% extends 'myserver/master.html' %}
+
+{% load static %}
+
+{% block page_title %}
+home
+{% endblock %}
+
+{% block page_static %}
+<link rel="stylesheet" href="{% static 'main/styles/style.css' %}">
+{% endblock %}
+
+{% block page_content %}
+<div class="contentProduct">
+    <div>
+        <h1 class="text">MAIN</h1>
+        <div class="text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+            tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+            quis nostrud
+            exerci tation
+            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel
+            eum iriure
+            dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+            feugiat nulla
+            facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
+            zzril
+            delenit augue duis dolore te feugait nulla facilisi.
+        </div>
+        <div class="text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+            tincidunt ut
+            laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+            exerci tation
+            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel
+            eum iriure
+            dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+            feugiat nulla
+            facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
+            zzril
+            delenit augue duis dolore te feugait nulla facilisi.
+        </div>
+        <div class="text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+            tincidunt ut
+            laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+            exerci tation
+            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel
+            eum iriure
+            dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+            feugiat nulla
+            facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
+            zzril
+            delenit augue duis dolore te feugait nulla facilisi.
+        </div>
+    </div>
+</div>
+
+<div class="gallery">
+    <a href="../products/product1.html"><img class="foto" src="/static/main/images/instaFeed/1.jpg" alt="gallery"></a>
+    <a href="../products/product2.html"><img class="foto" src="/static/main/images/instaFeed/2.jpg" alt="gallery"></a>
+    <a href="../products/product3.html"><img class="foto" src="/static/main/images/instaFeed/3.jpg" alt="gallery"></a>
+    <a href="../products/product4.html"><img class="foto" src="/static/main/images/instaFeed/4.jpg" alt="gallery"></a>
+    <a href="../products/product5.html"><img class="foto" src="/static/main/images/instaFeed/5.jpg" alt="gallery"></a>
+    <a href="../products/product6.html"><img class="foto" src="/static/main/images/instaFeed/6.jpg" alt="gallery"></a>
+</div>
+{% endblock %}
