@@ -1,6 +1,27 @@
 [
   {
-    'name': '',
-    
+    "name": "clutch bag",
+    "description": "a slim, flat handbag without handles or a strap",
+    "price": "1 500,00"
+  },
+  {
+    "name": "clutch bag",
+    "description": "a slim, flat handbag without handles or a strap",
+    "price": "1 500,00"
+  },
+  {
+    "name": "evening bag",
+    "description": "a slim, flat handbag without handles or a strap",
+    "price": "2 500,00"
+  },
+  {
+    "name": "backpack",
+    "description": "a slim, flat handbag without handles or a strap",
+    "price": "4 500,00"
+  },
+  {
+    "name": "string bag",
+    "description": "a slim, flat handbag without handles or a strap",
+    "price": "1 000,00"
   }
 ]
