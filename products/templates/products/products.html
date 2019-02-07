@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block page_title %}
-home
+products
 {% endblock %}
 
 {% block page_static %}
@@ -11,6 +11,21 @@ home
 {% endblock %}
 
 {% block page_content %}
+<div class="products">
+    {% for object in object_list %}
+    <div class="product_item">
+        <span class="product_name">
+            {{ object.name }}
+        </span>
+        <span class="product_description">
+            {{ object.description }}
+        </span>
+        <span class="product_price">
+            {{ object.price }}
+        </span>
+    </div>
+    {% endfor %}
+</div>
 <div class="contentProduct">
     <h3 class="newProduct">New Product</h3>
     <div class="products">
