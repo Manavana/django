@@ -20,8 +20,13 @@ products
         <span class="product_description">
             {{ object.description }}
         </span>
+        {% if object.price %}
         <span class="product_price">
             {{ object.price }}
+        </span>
+        {% else %}
+        <span class="product_price">
+            Значение отсутствует
         </span>
     </div>
     {% endfor %}
