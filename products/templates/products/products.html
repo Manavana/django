@@ -29,11 +29,14 @@ products
             No value
         </span>
         {% endif %}
-        <a href="/products/{{ forloop.counter0 }}" class="product_link">
+        <a href="{% url 'detail' pk=object.id %}" class="product_link">
             {{ object.name|upper }}
         </a>
     </div>
     {% endfor %}
+    <a href="{% url 'main' %}">
+        HOME
+    </a>
 </div>
 <div class="contentProduct">
     <h3 class="newProduct">New Product</h3>
