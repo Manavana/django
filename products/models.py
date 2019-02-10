@@ -11,7 +11,7 @@ class product(models.Model):
         null=True,
     )
 
-    cost = models.DecimalField(
+    price = models.DecimalField(
         max_digits=12,
         decimal_places=2,
         default=0
