@@ -15,14 +15,23 @@ products
     {% for object in object_list %}
     <div class="product_item">
         <span class="product_name">
-            {{ object.name }}
+            {{ object.name|upper }}
         </span>
         <span class="product_description">
             {{ object.description }}
         </span>
+        {% if object.price %}
         <span class="product_price">
             {{ object.price }}
         </span>
+        {% else %}
+        <span class="product_price">
+            No value
+        </span>
+        {% endif %}
+        <a href="/products/{{ forloop.counter0 }}" class="product_link">
+            {{ object.name|upper }}
+        </a>
     </div>
     {% endfor %}
 </div>
