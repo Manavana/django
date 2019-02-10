@@ -12,23 +12,19 @@ products
 
 {% block page_content %}
 <div class="products">
-    {% for object in object_list %}
     <div class="product_item">
-        <span class="product_name">
-            {{ object.name }}
-        </span>
-        <span class="product_description">
+        <h1 class="product_name">
+            {{ object.name|title }}
+        </h1>
+        <div class="product_description">
             {{ object.description }}
-        </span>
+        </div>
         {% if object.price %}
         <span class="product_price">
             {{ object.price }}
         </span>
-        {% else %}
-        <span class="product_price">
-            Значение отсутствует
-        </span>
+        {% endif %}
+        <button>BYU</button>
     </div>
-    {% endfor %}
 </div>
 {% endblock %}
