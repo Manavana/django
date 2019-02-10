@@ -16,3 +16,6 @@ class product(models.Model):
         decimal_places=2,
         default=0
     )
+
+    def __str__(self):
+        return self.name
