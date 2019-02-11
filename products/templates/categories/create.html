@@ -1,0 +1,26 @@
+{% extends 'myserver/master.html' %}
+
+{% load static %}
+
+{% block page_title %}
+create
+{% endblock %}
+
+{% block page_static %}
+<link rel="stylesheet" href="{% static 'products/styles/style.css' %}">
+{% endblock %}
+
+{% block page_content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="field_group">
+        <label for="name">Name</label>
+        <input name="name" type="text">
+    </div>
+    <div class="field_group">
+        <label for="description">Description</label>
+        <textarea name="description"></textarea>
+    </div>
+    <input type="submit">
+</form>
+{% endblock %}
