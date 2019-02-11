@@ -26,3 +26,9 @@ def product_detail_view(request, pk):
         'products/detail.html',
         {'object': data}
     )
+
+def category_create_view(request):
+    return render(
+        request,
+        'categories/create.html'
+    )
