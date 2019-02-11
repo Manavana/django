@@ -13,14 +13,13 @@ create
 {% block page_content %}
 <form action="" method="POST">
     {% csrf_token %}
+    <!--{{ form.as_p }}-->
+    {% for field in form %}
     <div class="field_group">
-        <label for="name">Name</label>
-        <input name="name" type="text">
+        <label for="{{ field.name }}">{{ field.label }}</label>
+        {{ field }}
     </div>
-    <div class="field_group">
-        <label for="description">Description</label>
-        <textarea name="description"></textarea>
-    </div>
+    {% endfor %}
     <input type="submit">
 </form>
 {% endblock %}
