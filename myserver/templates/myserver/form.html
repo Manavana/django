@@ -1,0 +1,22 @@
+<form action="" method="POST">
+    {% csrf_token %}
+    <!--{{ form.as_p }}-->
+    {% for err in form.not_field_errors %}
+    <div class="alert alert-danger" role="alert">
+        <span>
+            {{ err }}
+        </span>
+    </div>
+    {% endfor %}
+    {% for field in form %}
+    <div class="field_group">
+        <label for="{{ field.name }}">{{ field.label }}</label>
+        {{ field }}
+
+        {% for err in field.errors %}
+            <small class="field_error">{{ err }}</small>
+        {% endfor %}
+    </div>
+    {% endfor %}
+    <input type="submit">
+</form>
