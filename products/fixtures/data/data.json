@@ -3,7 +3,7 @@
     "model": "products.product",
     "pk": 1,
     "fields": {
-      "name": "clutch bag",
+      "name": "clutch",
       "description": "a slim, flat handbag without handles or a strap",
       "price": "1500"
     }
@@ -12,7 +12,7 @@
     "model": "products.product",
     "pk": 2,
     "fields": {
-      "name": "clutch bag",
+      "name": "kelly",
       "description": "a slim, flat handbag without handles or a strap",
       "price": "1500"
     }
@@ -21,7 +21,7 @@
     "model": "products.product",
     "pk": 3,
     "fields": {
-      "name": "evening bag",
+      "name": "baguette",
       "description": "a slim, flat handbag without handles or a strap",
       "price": "2500"
     }
@@ -39,9 +39,27 @@
     "model": "products.product",
     "pk": 5,
     "fields": {
-      "name": "string bag",
+      "name": "saddle bag",
       "description": "a slim, flat handbag without handles or a strap",
       "price": "1000"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "name": "tote bag",
+      "description": "a slim, flat handbag without handles or a strap",
+      "price": "5000"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "name": "frame",
+      "description": "a slim, flat handbag without handles or a strap",
+      "price": "3500"
     }
   }
 ]
