@@ -52,9 +52,12 @@
                             <p class="open">now is open!</p>
                         </div>
                     </div>
+
+                    {% block page_content %}
+                    {% endblock %}
                 </div>
 
-                {% block page_content %}
+                {% block gallery %}
                 {% endblock %}
 
                 <div class="footer">
