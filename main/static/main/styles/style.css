@@ -361,12 +361,10 @@ body {
 }
 
 .contacts {
-    width: 1170px;
-    height: 150px;
-    /*background: blueviolet;*/
-    margin: 0 auto;
+    width: 870px;
+    margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 .contacts a {
@@ -797,7 +795,8 @@ td, th
 
 .field
 {
-    clear: both;
+    width: 870px;
+    /*clear: both;*/
     text-align: right;
     line-height: 25px;
 }
