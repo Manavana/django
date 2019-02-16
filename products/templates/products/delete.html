@@ -1,0 +1,17 @@
+{% extends 'myserver/master.html' %}
+
+{% load static %}
+
+{% block page_title %}
+update product
+{% endblock %}
+
+{% block page_static %}
+<link rel="stylesheet" href="{% static 'products/styles/style.css' %}">
+{% endblock %}
+
+{% block page_content %}
+
+{% include 'myserver/form.html' with form=form %}
+
+{% endblock %}
