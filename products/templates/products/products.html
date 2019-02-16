@@ -43,7 +43,7 @@ products
     <div class="products">
         {% for object in object_list %}
         <div class="product productNew">
-            <a href="{% url 'detail' pk=object.id %}" class="product_link">
+            <a href="{% url 'products:detail' pk=object.id %}" class="product_link">
                 <img src="/static/products/images/products/7.jpg" alt="#7">
             </a>
             <!--<a href="../products/product7.html"><img src="/static/products/images/products/7.jpg" alt="#7"></a>-->

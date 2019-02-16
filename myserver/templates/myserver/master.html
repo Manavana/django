@@ -35,17 +35,17 @@
                 <div class="contentInside">
                     <div>
                         <div class="menu">
-                            <a href="/" class="link"><h3 class="menuName">menu</h3></a>
+                            <a href="{% url 'main:main' %}" class="link"><h3 class="menuName">menu</h3></a>
                             <ul class="menuSections">
                                 <!--{% for item in menu_section %}-->
                                 <!--<li><a href="#">{{ item }}</a></li>-->
                                 <!--{% endfor %}-->
-                                <li><a href="/">about us</a></li>
-                                <li><a href="/products/">products</a></li>
-                                <li><a href="/">stok</a></li>
-                                <li><a href="/">news</a></li>
-                                <li><a href="/">master class</a></li>
-                                <li><a href="/contacts/">contacts</a></li>
+                                <li><a href="{% url 'main:main' %}">about us</a></li>
+                                <li><a href="{% url 'products:products' %}">products</a></li>
+                                <li><a href="{% url 'main:main' %}">stok</a></li>
+                                <li><a href="{% url 'main:main' %}">news</a></li>
+                                <li><a href="{% url 'main:main' %}">master class</a></li>
+                                <li><a href="{% url 'main:contacts' %}">contacts</a></li>
                             </ul>
                         </div>
                         <div class="advertising">
