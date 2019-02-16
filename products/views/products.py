@@ -70,3 +70,12 @@ def product_update_view(request, pk):
         'products/update.html',
         {'form': form}
     )
+
+def product_delete_view(request, pk):
+    obj = get_object_or_404(product, pk=pk)
+
+    return render(
+        request,
+        'products/delete.html',
+        {'object': obj}
+    )
