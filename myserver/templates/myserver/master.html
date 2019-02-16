@@ -20,13 +20,13 @@
         <div class="container">
             <div class="header">
                 <div class="headerInside">
-                    <a href="/" class="logo"></a>
+                    <a href="{% url 'main:main' %}" class="logo"></a>
                     <div class="socialMedia">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fas fa-envelope"></i></a>
-                        <a href="#"><i class="fab fa-vk"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="{% url 'main:main' %}"><i class="fab fa-instagram"></i></a>
+                        <a href="{% url 'main:main' %}"><i class="fas fa-envelope"></i></a>
+                        <a href="{% url 'main:main' %}"><i class="fab fa-vk"></i></a>
+                        <a href="{% url 'main:main' %}"><i class="fab fa-youtube"></i></a>
+                        <a href="{% url 'main:main' %}"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
                                 <!--<li><a href="#">{{ item }}</a></li>-->
                                 <!--{% endfor %}-->
                                 <li><a href="{% url 'main:main' %}">about us</a></li>
-                                <li><a href="{% url 'products:products' %}">products</a></li>
+                                <li><a href="{% url 'products:list' %}">products</a></li>
                                 <li><a href="{% url 'main:main' %}">stok</a></li>
                                 <li><a href="{% url 'main:main' %}">news</a></li>
                                 <li><a href="{% url 'main:main' %}">master class</a></li>

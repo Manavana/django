@@ -29,7 +29,7 @@ from django.http import Http404
 
 def category_create_view(request):
     form = categoryModelForm()
-    success_url = reverse('list')
+    success_url = reverse('products:list')
 
     if request.method == 'POST':
         form = categoryModelForm(data=request.POST)
@@ -58,7 +58,7 @@ def category_update_view(request, pk):
         raise Http404
 
     form = categoryModelForm(instance=obj)
-    success_url = reverse('list')
+    success_url = reverse('products:list')
     if request.method == 'POST':
         form = categoryModelForm(
             request.POST,
