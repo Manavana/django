@@ -1,6 +1,6 @@
 from django.urls import path
 
-from myserver.products.views import (
+from products.views import (
     products, product_detail_view
 )
 

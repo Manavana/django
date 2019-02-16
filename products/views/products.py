@@ -1,7 +1,7 @@
 import json
 from django.shortcuts import render, redirect
-from .models import product, category
-from .forms import categoryForm, categoryModelForm
+from products.models import product, category
+from products.forms import categoryForm, categoryModelForm
 from django.urls import reverse
 from django.http import Http404
 

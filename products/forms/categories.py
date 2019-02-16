@@ -1,5 +1,5 @@
 from django import forms
-from myserver.products.models import category
+from products.models import category
 
 class categoryForm(forms.Form):
     name = forms.CharField(required=True)
