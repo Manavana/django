@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block page_title %}
-update product
+delete product
 {% endblock %}
 
 {% block page_static %}
@@ -12,6 +12,11 @@ update product
 
 {% block page_content %}
 
-{% include 'myserver/form.html' with form=form %}
+<form method="POST">
+    <span>
+        Подтверждаете удаление записи о {{ object.name }}?
+    </span>
+   <input type="submit">
+</form>
 
 {% endblock %}
