@@ -73,6 +73,12 @@ def product_update_view(request, pk):
 
 def product_delete_view(request, pk):
     obj = get_object_or_404(product, pk=pk)
+    success_url = reverse('products:list')
+
+    if request.method == 'POST':
+        obj.delete()
+
+        return redirect(success_url)
 
     return render(
         request,
