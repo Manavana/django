@@ -13,6 +13,7 @@ delete product
 {% block page_content %}
 
 <form method="POST">
+    {% csrf_token %}
     <span>
         Подтверждаете удаление записи о {{ object.name }}?
     </span>
