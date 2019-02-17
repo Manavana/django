@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import LoginForm
+from .forms import LoginForm, RegisterForm
 from django.contrib.auth import authenticate, login
 from django.urls import reverse
 
@@ -28,5 +28,16 @@ def login_view(request):
     return render(
         request,
         'accounts/login.html',
+        {'form': form}
+    )
+
+def register_view(request):
+    form = RegisterForm()
+
+
+
+    return render(
+        request,
+        'accounts/register.html',
         {'form': form}
     )
