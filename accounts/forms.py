@@ -25,6 +25,17 @@ class RegisterForm(forms.ModelForm):
 
         return self.cleaned_data
 
+    def save(self, commit=True):
+        user = super(RegisterForm, self).save(commit=False)
+        password = self.cleaned_data.get('password')
+
+        user.set_password(password)
+
+        if commit:
+            user.save()
+
+        return user
+
     class Meta:
         model = accountUser
         fields = ['username', 'password']
