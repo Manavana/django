@@ -17,7 +17,7 @@ class RegisterForm(forms.ModelForm):
     )
 
     def clean_password_confirm(self):
-        pass
+        password = self.cleaned_data.get('password')
 
     class Meta:
         model = accountUser
