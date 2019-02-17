@@ -16,7 +16,7 @@ class RegisterForm(forms.ModelForm):
         widget=forms.widgets.PasswordInput()
     )
 
-    def clear_password_confirm(self):
+    def clean_password_confirm(self):
         pass
 
     class Meta:
