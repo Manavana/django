@@ -18,6 +18,12 @@ class RegisterForm(forms.ModelForm):
 
     def clean_password_confirm(self):
         password = self.cleaned_data.get('password')
+        password_confirm = self.cleaned_data.get('password_confirm')
+
+        if password and password_confirm and password != password_confirm:
+            raise forms.ValidationError('Password is not confirm')
+
+        return self.cleaned_data
 
     class Meta:
         model = accountUser
