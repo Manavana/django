@@ -36,7 +36,7 @@ def register_view(request):
     success_url = reverse('products:list')
 
     if request.method == 'POST':
-        form = LoginForm(data=request.POST)
+        form = RegisterForm(data=request.POST)
 
         if form.is_valid():
             user = form.save(commit=False)
