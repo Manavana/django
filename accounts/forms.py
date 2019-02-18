@@ -39,3 +39,6 @@ class RegisterForm(forms.ModelForm):
     class Meta:
         model = accountUser
         fields = ['username', 'password']
+        widgets = {
+            'password': forms.widgets.PasswordInput()
+        }
