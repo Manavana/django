@@ -39,7 +39,9 @@ def register_view(request):
         form = LoginForm(data=request.POST)
 
         if form.is_valid():
-            user = form.save
+            user = form.save(commit=False)
+            user.is_active = True
+            user.save()
 
             if user and user.is_active:
                 login(request, user)
