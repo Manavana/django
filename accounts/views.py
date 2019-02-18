@@ -6,10 +6,10 @@ from django.urls import reverse
 # Create your views here.
 def login_view(request):
     form = LoginForm()
+    success_url = reverse('products:list')
 
     if request.method == 'POST':
         form = LoginForm(data=request.POST)
-        success_url = reverse('products:list')
 
         if form.is_valid():
             username = form.cleaned_data.get('username')
@@ -33,8 +33,18 @@ def login_view(request):
 
 def register_view(request):
     form = RegisterForm()
+    success_url = reverse('products:list')
 
+    if request.method == 'POST':
+        form = LoginForm(data=request.POST)
 
+        if form.is_valid():
+            user = form.save
+
+            if user and user.is_active:
+                login(request, user)
+
+                return redirect(success_url)
 
     return render(
         request,
