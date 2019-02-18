@@ -3,12 +3,34 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
 from products.models import product
 from products.forms import productForm
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.http import Http404
 
 class ProductListView(ListView):
-    model = Product
+    model = product
     template_name = 'products/products.html'
+
+class ProductDetailView(DetailView):
+    model = product
+    template_name = 'products/detail.html'
+
+class ProductCreateView(CreateView):
+    model = product
+    form_class = productForm
+    template_name = 'products/create.html'
+    success_url = reverse_lazy('products:list')
+
+class ProductUpdateView(UpdateView):
+    model = product
+    fields = [
+        'name', 'image', 'category', 'description', 'price'
+    ]
+    template_name = 'products/update.html'
+    success_url = reverse_lazy('products:list')
+
+class ProductDeleteView(DeleteView):
+    model = product
+    template_name = 'products/delete.html'
 
 def products(request):
     # with open('products/fixtures/data/data.json') as file:
