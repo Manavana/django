@@ -1,11 +1,15 @@
 import json
 from django.shortcuts import render, redirect, get_object_or_404
+from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
 from products.models import product
 from products.forms import productForm
 from django.urls import reverse
 from django.http import Http404
 
-# Create your views here.
+class ProductListView(ListView):
+    model = Product
+    template_name = 'products/products.html'
+
 def products(request):
     # with open('products/fixtures/data/data.json') as file:
     #     data = json.load(file)
