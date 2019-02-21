@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block page_title %}
-products
+categories
 {% endblock %}
 
 {% block page_static %}
@@ -24,7 +24,7 @@ products
             {{ object.price }}
         </span>
         {% endif %}
-        <button>BYU</button>
+        <button>BUY</button>
         <div>
             <a href="{% url 'products:list' %}">
                 BACK
