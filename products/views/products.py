@@ -40,7 +40,7 @@ def products(request):
 
     return render(
         request,
-        'products/products.html',
+        'products/categories.html',
         {'object_list': data}
     )
 
