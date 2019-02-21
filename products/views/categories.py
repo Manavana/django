@@ -2,8 +2,33 @@ import json
 from django.shortcuts import render, redirect
 from products.models import category
 from products.forms import categoryForm, categoryModelForm
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.http import Http404
+from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
+
+class CategoryListView(ListView):
+    model = category
+    template_name = 'categories/categories.html'
+
+class CategoryDetailView(DetailView):
+    model = category
+    template_name = 'categories/detail.html'
+
+class CategoryCreateView(CreateView):
+    model = category
+    form_class = categoryModelForm
+    template_name = 'categories/create.html'
+    success_url = reverse_lazy('categories:list')
+
+class CategoryUpdateView(UpdateView):
+    model = category
+    form_class = categoryModelForm
+    template_name = 'categories/update.html'
+    success_url = reverse_lazy('categories:list')
+
+class CategoryDeleteView(DeleteView):
+    model = category
+    template_name = 'categories/delete.html'
 
 # def category_create_view(request):
 #     form = categoryForm()
