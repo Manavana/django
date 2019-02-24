@@ -15,7 +15,7 @@ products
 <div class="contentProduct">
     <h3 class="newProduct">New Product</h3>
     <div class="products">
-        {% for object in page_obj %}
+        {% for object in object_list %}
         {% include 'myserver/products.html' with id=object.pk image=object.image name=object.name price=object.price %}
         {% endfor %}
     </div>

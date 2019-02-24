@@ -14,16 +14,6 @@ class CategoryDetailView(DetailView):
     model = category
     template_name = 'categories/detail.html'
 
-    def get_context_data(self, **kwargs):
-        key = self.context_object_name if self.context_object_name else 'object'
-        obj = kwargs.get(key)
-        products = obj.product_set.all()
-
-        return {
-            key: obj,
-            'products': products
-        }
-
 class CategoryCreateView(CreateView):
     model = category
     form_class = categoryModelForm
