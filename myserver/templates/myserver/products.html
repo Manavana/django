@@ -3,7 +3,7 @@
 <div class="product productNew">
     <a href="{% url 'products:detail' pk=id %}" class="product_link">
         {% if image %}
-        <img src="{{ image }}" alt="{{ name }}">
+        <img src="{{ image.url }}" alt="{{ name }}">
         {% else %}
         <img src="{% static 'products/images/empty.png' %}" alt="empty">
         {% endif %}
