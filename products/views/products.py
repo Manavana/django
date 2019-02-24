@@ -10,18 +10,19 @@ from django.core.paginator import Paginator
 class ProductListView(ListView):
     model = product
     template_name = 'products/products.html'
+    paginate_by = 3
 
-    def get_context_data(self, **kwargs):
-        context = super(ProductListView, self).get_context_data(**kwargs)
-        queryset = context.get('object_list')
-
-        page = self.request.GET.get('page')
-        paginator = Paginator(queryset, 3)
-        page_obj = paginator.get_page(page)
-
-        context['page_obj'] = page_obj
-
-        return context
+    # def get_context_data(self, **kwargs):
+    #     context = super(ProductListView, self).get_context_data(**kwargs)
+    #     queryset = context.get('object_list')
+    #
+    #     page = self.request.GET.get('page')
+    #     paginator = Paginator(queryset, 3)
+    #     page_obj = paginator.get_page(page)
+    #
+    #     context['page_obj'] = page_obj
+    #
+    #     return context
 
 class ProductDetailView(DetailView):
     model = product
