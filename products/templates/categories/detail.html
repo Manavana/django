@@ -41,4 +41,6 @@ categories
     {% endfor %}
 </div>
 
+{% include 'myserver/pagination.html' with page=products page_range=products.paginator.page_range %}
+
 {% endblock %}
