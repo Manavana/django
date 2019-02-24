@@ -36,7 +36,7 @@ categories
 </div>
 
 <div class="products">
-    {% for object in object.product_set.all %}
+    {% for object in products %}
     {% include 'myserver/products.html' with id=object.pk image=object.image name=object.name price=object.price %}
     {% endfor %}
 </div>
