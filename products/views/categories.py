@@ -26,7 +26,7 @@ class RestCategoryListView(ListView):
         object_list = context.get('object_list')
 
         data = {}
-        data['results'] = serialize_object_list(object_list)
+        data['results'] = self.serialize_object_list(object_list)
 
         return data
 
