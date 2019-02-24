@@ -1,4 +1,4 @@
-const = renserProduct = ({id, name, image, price}) => (
+const = renderProduct = ({id, name, image, price}) => (
     `
     <div class="product productNew">
         <a href="/products/${ id }" class="product_link">
