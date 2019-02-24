@@ -4,8 +4,52 @@ from django.views.generic import ListView, CreateView, DetailView, UpdateView, D
 from products.models import product
 from products.forms import productForm
 from django.urls import reverse, reverse_lazy
-from django.http import Http404
+from django.http import Http404, JsonResponse
 from django.core.paginator import Paginator
+
+class RestProductListView(ListView):
+    model = product
+    template_name = 'products/products.html'
+    paginate_by = 3
+
+    def serialize_object_list(self, queryset):
+        return list(
+            map(
+                lambda itm: {
+                    'id': itm.id,
+                    'name': itm.name,
+                    'category': itm.category.name if itm.category else None,
+                    'image': itm.image.url if itm.image else None,
+                    'price': itm.price,
+                },
+                queryset
+            )
+        )
+
+    def get_context_data(self, **kwargs):
+        context = super(RestProductListView, self).get_context_data(**kwargs)
+
+        data = {}
+
+        page = context.get('page_obj')
+        route_url = reverse('rest_products:list')
+
+        data['next_url'] = None
+        data['previous_url'] = None
+        data['page'] = page.number
+        data['count'] = page.paginator.count
+        data['results'] = self.serialize_object_list(page.object_list)
+
+        if page.has_previous():
+            data['previous_url'] = f'{route_url}?page={page.previous_page_number()}'
+
+        if page.has_next():
+            data['next_url'] = f'{route_url}?page={page.next_page_number()}'
+
+        return data
+
+    def render_to_response(self, context, **response_kwargs):
+        return JsonResponse(context)
 
 class ProductListView(ListView):
     model = product
