@@ -9,7 +9,6 @@ from django.core.paginator import Paginator
 
 class RestProductListView(ListView):
     model = product
-    template_name = 'products/products.html'
     paginate_by = 3
 
     def serialize_object_list(self, queryset):
