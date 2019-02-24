@@ -15,8 +15,9 @@ class ProductListView(ListView):
         context = super(ProductListView, self).get_context_data(**kwargs)
         queryset = context.get('object_list')
 
+        page = self.request.GET.get('page')
         paginator = Paginator(queryset, 3)
-        page_obj = paginator.get_page(1)
+        page_obj = paginator.get_page(page)
 
         context['page_obj'] = page_obj
 
