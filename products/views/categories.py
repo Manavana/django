@@ -21,7 +21,7 @@ class CategoryDetailView(DetailView):
         products = obj.product_set.all()
 
         page = self.request.GET.get('page')
-        paginator = Paginator(products, 3)
+        paginator = Paginator(products, 1)
         page_obj = paginator.get_page(page)
 
         return {
