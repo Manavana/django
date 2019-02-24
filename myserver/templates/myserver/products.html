@@ -1,0 +1,130 @@
+<div class="product productNew">
+    <a href="{% url 'products:detail' pk=object.id %}" class="product_link">
+        {% if object.image %}
+        <img src="{{ object.image.url }}" alt="{{ object.name }}">
+        {% else %}
+        <img src="{% static 'products/images/empty.png' %}" alt="empty">
+        {% endif %}
+    </a>
+    <!--<a href="../products/product7.html"><img src="/static/products/images/products/7.jpg" alt="#7"></a>-->
+    <div class="productInfo">
+        <p class="vendorCode">
+            {{ object.name|upper }}
+        </p>
+        <div>
+            {% if object.price %}
+            <p class="price">
+                {{ object.price }} &#8381;
+            </p>
+            {% else %}
+            <span class="product_price">
+                        No value
+                    </span>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!--<div class="product productHot">-->
+<!--<a href="{% url 'products:detail' pk=object.id %}" class="product_link">-->
+<!--<img src="/static/products/images/products/6.jpg" alt="#6">-->
+<!--</a>-->
+<!--&lt;!&ndash;<a href="../products/product6.html"><img src="/static/products/images/products/6.jpg" alt="#6"></a>&ndash;&gt;-->
+<!--<div class="productInfo">-->
+<!--<p class="vendorCode">-->
+<!--{{ object.name|upper }}-->
+<!--</p>-->
+<!--<div>-->
+<!--{% if object.price %}-->
+<!--<p class="price">-->
+<!--{{ object.price }} &#8381;-->
+<!--</p>-->
+<!--{% else %}-->
+<!--<span class="product_price">-->
+<!--No value-->
+<!--</span>-->
+<!--{% endif %}-->
+<!--<p class="salePrice">-->
+<!--&#8364; 1,270.15-->
+<!--</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="product">-->
+<!--<a href="{% url 'products:detail' pk=object.id %}" class="product_link">-->
+<!--<img src="/static/products/images/products/2.jpg" alt="#2">-->
+<!--</a>-->
+<!--&lt;!&ndash;<a href="../products/product2.html"><img src="/static/products/images/products/2.jpg" alt="#2"></a>&ndash;&gt;-->
+<!--<div class="productInfo">-->
+<!--<p class="vendorCode">-->
+<!--{{ object.name|upper }}-->
+<!--</p>-->
+<!--<div>-->
+<!--{% if object.price %}-->
+<!--<p class="price">-->
+<!--{{ object.price }} &#8381;-->
+<!--</p>-->
+<!--{% else %}-->
+<!--<span class="product_price">-->
+<!--No value-->
+<!--</span>-->
+<!--{% endif %}-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="product">-->
+<!--<a href="{% url 'products:detail' pk=object.id %}" class="product_link">-->
+<!--<img src="/static/products/images/products/1.jpg" alt="#1">-->
+<!--</a>-->
+<!--&lt;!&ndash;<a href="../products/product1.html"><img src="/static/products/images/products/1.jpg" alt="#1"></a>&ndash;&gt;-->
+<!--<div class="productInfo">-->
+<!--<p class="vendorCode">-->
+<!--{{ object.name|upper }}-->
+<!--</p>-->
+<!--<div>-->
+<!--{% if object.price %}-->
+<!--<p class="price">-->
+<!--{{ object.price }} &#8381;-->
+<!--</p>-->
+<!--{% else %}-->
+<!--<span class="product_price">-->
+<!--No value-->
+<!--</span>-->
+<!--{% endif %}-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="product">-->
+<!--<a href="{% url 'products:detail' pk=object.id %}" class="product_link">-->
+<!--<img src="/static/products/images/products/3.jpg" alt="#3">-->
+<!--</a>-->
+<!--&lt;!&ndash;<a href="../products/product3.html"><img src="/static/products/images/products/3.jpg" alt="#3"></a>&ndash;&gt;-->
+<!--<div class="productInfo">-->
+<!--<p class="vendorCode">-->
+<!--{{ object.name|upper }}-->
+<!--</p>-->
+<!--<div>-->
+<!--{% if object.price %}-->
+<!--<p class="price">-->
+<!--{{ object.price }} &#8381;-->
+<!--</p>-->
+<!--{% else %}-->
+<!--<span class="product_price">-->
+<!--No value-->
+<!--</span>-->
+<!--{% endif %}-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="product">-->
+<!--<a href="../products/product5.html"><img src="/static/products/images/products/5.jpg" alt="#5"></a>-->
+<!--<div class="productInfo">-->
+<!--<p class="vendorCode">-->
+<!--YOKE 19 QS-->
+<!--</p>-->
+<!--<div>-->
+<!--<p class="price">-->
+<!--&#8364; 1,130.70-->
+<!--</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
