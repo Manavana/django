@@ -5,6 +5,7 @@ from products.forms import categoryForm, categoryModelForm
 from django.urls import reverse, reverse_lazy
 from django.http import Http404
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
+from django.core.paginator import Paginator
 
 class CategoryListView(ListView):
     model = category
@@ -19,9 +20,13 @@ class CategoryDetailView(DetailView):
         obj = kwargs.get(key)
         products = obj.product_set.all()
 
+        page = self.request.GET.get('page')
+        paginator = Paginator(products, 3)
+        page_obj = paginator.get_page(page)
+
         return {
             key: obj,
-            'products': products
+            'products': page_obj
         }
 
 class CategoryCreateView(CreateView):
