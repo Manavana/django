@@ -42,7 +42,7 @@ products
     <h3 class="newProduct">New Product</h3>
     <div class="products">
         {% for object in object_list %}
-        {% include 'myserver/products.html' %}
+        {% include 'myserver/products.html' image=object.image.url name=object.name price=object.price %}
         {% endfor %}
     </div>
     <h3 class="nameProduct">Top Product</h3>

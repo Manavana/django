@@ -1,7 +1,7 @@
 <div class="product productNew">
-    <a href="{% url 'products:detail' pk=object.id %}" class="product_link">
-        {% if object.image %}
-        <img src="{{ object.image.url }}" alt="{{ object.name }}">
+    <a href="{% url 'products:detail' pk=id %}" class="product_link">
+        {% if image %}
+        <img src="{{ image }}" alt="{{ name }}">
         {% else %}
         <img src="{% static 'products/images/empty.png' %}" alt="empty">
         {% endif %}
@@ -9,12 +9,12 @@
     <!--<a href="../products/product7.html"><img src="/static/products/images/products/7.jpg" alt="#7"></a>-->
     <div class="productInfo">
         <p class="vendorCode">
-            {{ object.name|upper }}
+            {{ name|upper }}
         </p>
         <div>
-            {% if object.price %}
+            {% if price %}
             <p class="price">
-                {{ object.price }} &#8381;
+                {{ price }} &#8381;
             </p>
             {% else %}
             <span class="product_price">
@@ -25,18 +25,18 @@
     </div>
 </div>
 <!--<div class="product productHot">-->
-<!--<a href="{% url 'products:detail' pk=object.id %}" class="product_link">-->
+<!--<a href="{% url 'products:detail' pk=id %}" class="product_link">-->
 <!--<img src="/static/products/images/products/6.jpg" alt="#6">-->
 <!--</a>-->
 <!--&lt;!&ndash;<a href="../products/product6.html"><img src="/static/products/images/products/6.jpg" alt="#6"></a>&ndash;&gt;-->
 <!--<div class="productInfo">-->
 <!--<p class="vendorCode">-->
-<!--{{ object.name|upper }}-->
+<!--{{ name|upper }}-->
 <!--</p>-->
 <!--<div>-->
-<!--{% if object.price %}-->
+<!--{% if price %}-->
 <!--<p class="price">-->
-<!--{{ object.price }} &#8381;-->
+<!--{{ price }} &#8381;-->
 <!--</p>-->
 <!--{% else %}-->
 <!--<span class="product_price">-->
@@ -50,18 +50,18 @@
 <!--</div>-->
 <!--</div>-->
 <!--<div class="product">-->
-<!--<a href="{% url 'products:detail' pk=object.id %}" class="product_link">-->
+<!--<a href="{% url 'products:detail' pk=id %}" class="product_link">-->
 <!--<img src="/static/products/images/products/2.jpg" alt="#2">-->
 <!--</a>-->
 <!--&lt;!&ndash;<a href="../products/product2.html"><img src="/static/products/images/products/2.jpg" alt="#2"></a>&ndash;&gt;-->
 <!--<div class="productInfo">-->
 <!--<p class="vendorCode">-->
-<!--{{ object.name|upper }}-->
+<!--{{ name|upper }}-->
 <!--</p>-->
 <!--<div>-->
-<!--{% if object.price %}-->
+<!--{% if price %}-->
 <!--<p class="price">-->
-<!--{{ object.price }} &#8381;-->
+<!--{{ price }} &#8381;-->
 <!--</p>-->
 <!--{% else %}-->
 <!--<span class="product_price">-->
@@ -72,18 +72,18 @@
 <!--</div>-->
 <!--</div>-->
 <!--<div class="product">-->
-<!--<a href="{% url 'products:detail' pk=object.id %}" class="product_link">-->
+<!--<a href="{% url 'products:detail' pk=id %}" class="product_link">-->
 <!--<img src="/static/products/images/products/1.jpg" alt="#1">-->
 <!--</a>-->
 <!--&lt;!&ndash;<a href="../products/product1.html"><img src="/static/products/images/products/1.jpg" alt="#1"></a>&ndash;&gt;-->
 <!--<div class="productInfo">-->
 <!--<p class="vendorCode">-->
-<!--{{ object.name|upper }}-->
+<!--{{ name|upper }}-->
 <!--</p>-->
 <!--<div>-->
-<!--{% if object.price %}-->
+<!--{% if price %}-->
 <!--<p class="price">-->
-<!--{{ object.price }} &#8381;-->
+<!--{{ price }} &#8381;-->
 <!--</p>-->
 <!--{% else %}-->
 <!--<span class="product_price">-->
@@ -94,18 +94,18 @@
 <!--</div>-->
 <!--</div>-->
 <!--<div class="product">-->
-<!--<a href="{% url 'products:detail' pk=object.id %}" class="product_link">-->
+<!--<a href="{% url 'products:detail' pk=id %}" class="product_link">-->
 <!--<img src="/static/products/images/products/3.jpg" alt="#3">-->
 <!--</a>-->
 <!--&lt;!&ndash;<a href="../products/product3.html"><img src="/static/products/images/products/3.jpg" alt="#3"></a>&ndash;&gt;-->
 <!--<div class="productInfo">-->
 <!--<p class="vendorCode">-->
-<!--{{ object.name|upper }}-->
+<!--{{ name|upper }}-->
 <!--</p>-->
 <!--<div>-->
-<!--{% if object.price %}-->
+<!--{% if price %}-->
 <!--<p class="price">-->
-<!--{{ object.price }} &#8381;-->
+<!--{{ price }} &#8381;-->
 <!--</p>-->
 <!--{% else %}-->
 <!--<span class="product_price">-->
