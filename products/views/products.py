@@ -5,10 +5,22 @@ from products.models import product
 from products.forms import productForm
 from django.urls import reverse, reverse_lazy
 from django.http import Http404
+from django.core.paginator import Paginator
 
 class ProductListView(ListView):
     model = product
     template_name = 'products/products.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ProductListView, self).get_context_data(**kwargs)
+        queryset = context.get('object_list')
+
+        paginator = Paginator(queryset, 3)
+        page_obj = paginator.get_page(1)
+
+        context['page_obj'] = page_obj
+
+        return context
 
 class ProductDetailView(DetailView):
     model = product
