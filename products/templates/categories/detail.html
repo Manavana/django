@@ -11,6 +11,7 @@ categories
 {% endblock %}
 
 {% block page_content %}
+
 <div class="products">
     <div class="product_item">
         <h1 class="product_name">
@@ -26,11 +27,18 @@ categories
         {% endif %}
         <button>BUY</button>
         <div>
-            <a href="{% url 'products:list' %}">
+            <a href="{% url 'categories:list' %}">
                 BACK
             </a>
         </div>
 
     </div>
 </div>
+
+<div class="products">
+    {% for object in object.product_set.all %}
+    {% include 'myserver/products.html' with id=object.pk image=object.image name=object.name price=object.price %}
+    {% endfor %}
+</div>
+
 {% endblock %}
