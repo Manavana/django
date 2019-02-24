@@ -820,3 +820,7 @@ td, th
     width: 100%;
     height: 54px;
 }*/
+
+.show-more-button_hidden {
+    display: none;
+}
