@@ -19,101 +19,22 @@ products
         {% include 'myserver/products.html' with id=object.pk image=object.image name=object.name price=object.price %}
         {% endfor %}
     </div>
-    <h3 class="nameProduct">Top Product</h3>
-    <div class="products">
-        <div class="product">
-            <a href="../products/product4.html"><img src="/static/products/images/products/4.jpg" alt="#4"></a>
-            <div class="productInfo">
-                <p class="vendorCode">
-                    Ushingham Lightning 2014
-                </p>
-                <div>
-                    <p class="price">
-                        &#8364; 2,960.95
-                    </p>
-                    <p class="salePrice">
-                        &#8364; 3,100.15
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="product">
-            <a href="../products/product3.html"><img src="/static/products/images/products/3.jpg" alt="#3"></a>
-            <div class="productInfo">
-                <p class="vendorCode">
-                    CYPHER HEAT VES M
-                </p>
-                <div>
-                    <p class="price">
-                        &#8364; 849.95
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="product">
-            <a href="../products/product2.html"><img src="/static/products/images/products/2.jpg" alt="#2"></a>
-            <div class="productInfo">
-                <p class="vendorCode">
-                    SYNCRO MENS QS M
-                </p>
-                <div>
-                    <p class="price">
-                        &#8364; 1,110.99
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <h3 class="nameProduct">Sale Product</h3>
-    <div class="products">
-        <div class="product">
-            <a href="../products/product6.html"><img src="/static/products/images/products/6.jpg" alt="#6"></a>
-            <div class="productInfo">
-                <p class="vendorCode">
-                    SYNCRO MENS QS M
-                </p>
-                <div>
-                    <p class="price">
-                        &#8364; 249.95
-                    </p>
-                    <p class="salePrice">
-                        &#8364; 450.15
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="product">
-            <a href="../products/product7.html"><img src="/static/products/images/products/7.jpg" alt="#7"></a>
-            <div class="productInfo">
-                <p class="vendorCode">
-                    RAMOS - GLOVES FOR MEN
-                </p>
-                <div>
-                    <p class="price">
-                        &#8364; 459.65
-                    </p>
-                    <p class="salePrice">
-                        &#8364; 570.65
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="product">
-            <a href="../products/product5.html"><img src="/static/products/images/products/5.jpg" alt="#5"></a>
-            <div class="productInfo">
-                <p class="vendorCode">
-                    SixSixOne Evo Wired Full Face
-                </p>
-                <div>
-                    <p class="price">
-                        &#8364; 240.00
-                    </p>
-                    <p class="salePrice">
-                        &#8364; 370.65
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    <ul class="pagination">
+        {% if page_obj.has_previous %}
+        <li class="pagination_link_preview">
+            <a href="?page={{ page_obj.previous_page_number }}">
+                BACK
+            </a>
+        </li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li class="pagination_link_preview">
+            <a href="?page={{ page_obj.next_page_number }}">
+                NEXT
+            </a>
+        </li>
+        {% endif %}
+    </ul>
 </div>
 {% endblock %}
