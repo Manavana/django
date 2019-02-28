@@ -12,12 +12,8 @@ logout
 
 {% block page_content %}
 
-<form method="POST">
-    {% csrf_token %}
-    <span>
-        Выйти из системы?
-    </span>
-   <input type="submit">
-</form>
+<div>
+    Вы вышли из системы
+</div>
 
 {% endblock %}
