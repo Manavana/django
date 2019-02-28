@@ -1,12 +1,20 @@
 from django.shortcuts import render, redirect
 from .forms import LoginForm, RegisterForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, LoginView, LogoutView
 from django.views.generic import CreateView
 from django.urls import reverse, reverse_lazy
 
 from .models import accountUser
 
-# Create your views here.
+
+class AccountLogoutView(LogoutView):
+    template_name = 'accounts/logout.html'
+
+
+class AccountLoginView(LoginView):
+    template_name = 'accounts/login.html'
+
+
 def login_view(request):
     form = LoginForm()
     success_url = reverse('products:list')
@@ -35,7 +43,7 @@ def login_view(request):
     )
 
 
-class RegistrationView(CreateView):
+class AccountRegistrationView(CreateView):
     model = accountUser
     form_class = RegisterForm
     template_name = 'accounts/register.html'
