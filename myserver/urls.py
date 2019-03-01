@@ -18,10 +18,11 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
-from products.viewset import CategoryViewSet
+from products.viewset import CategoryViewSet, ProductViewSet
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
+router.register('products', ProductViewSet),
 router.register('categories', CategoryViewSet)
 
 router_django = [
