@@ -92,6 +92,10 @@ DATABASES = {
     }
 }
 
+# REST_FRAMEWORK = {
+#     'DEFAULT_PAGINATION_CLASS': 'rest.framework.pagination.LimitOffsetPagination',
+#     'PAGE_SIZE': 10
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
